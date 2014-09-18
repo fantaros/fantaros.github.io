@@ -46,9 +46,9 @@ var settings = {
         'min_angle': 0,
         'angle_range': 360,
         'min_speed': 25,
-        'speed_range': 15,
+        'speed_range': 50,
         'min_size': 1,
-        'size_range': 2,
+        'size_range': 3,
         'colour': '#82c4f5'
     }
 };
