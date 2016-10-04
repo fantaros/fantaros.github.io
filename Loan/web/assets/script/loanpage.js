@@ -8,11 +8,11 @@
 			info[$(this).attr("id")] = $(this).val();
 		});
 		currentResult = $loan.addPayment(info, currentResult, $("#isjssj").attr("checked") == "checked" ? 1:0);
-		if(result != null && result.length > 0) {
+		if(currentResult != null && currentResult.length > 0) {
 			$tbody.html("");
-			for(i=0;i<result.length;++i) {
+			for(i=0;i<currentResult.length;++i) {
 				$tr = $("<tr>");
-				array = result[i];
+				array = currentResult[i];
 				if(array != null && array.length > 0) {
 					for(j=0;j<array.length;++j) {
 						$td = $("<td>");
@@ -31,11 +31,11 @@
 			info[$(this).attr("id")] = $(this).val();
 		});
 		currentResult = $loan.calculateLoan(info);
-		if(result != null && result.length > 0) {
+		if(currentResult != null && currentResult.length > 0) {
 			$tbody.html("");
-			for(i=0;i<result.length;++i) {
+			for(i=0;i<currentResult.length;++i) {
 				$tr = $("<tr>");
-				array = result[i];
+				array = currentResult[i];
 				if(array != null && array.length > 0) {
 					for(j=0;j<array.length;++j) {
 						$td = $("<td>");
