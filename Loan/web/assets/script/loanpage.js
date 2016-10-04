@@ -1,5 +1,6 @@
 (function (window, undefined){
 	var $ = window.jQuery,
+	isjssj = true,
 	currentResult;
 	
 	function add (){
@@ -7,7 +8,7 @@
 		$(".form-control").each(function (){
 			info[$(this).attr("id")] = $(this).val();
 		});
-		currentResult = $loan.addPayment(info, currentResult, $("#isjssj").attr("checked") == "checked" ? 1:0);
+		currentResult = $loan.addPayment(info, currentResult, isjssj ? 1:0);
 		if(currentResult != null && currentResult.length > 0) {
 			$tbody.html("");
 			for(i=0;i<currentResult.length;++i) {
@@ -51,5 +52,15 @@
 	$(function (){
 		$("#jsloanbtn").click(calc);
 		$("#addloanbtn").click(add);
+		$("#isjssj").click(function (){
+			isjssj = true;
+			$(this).removeClass("btn-default").addClass("btn-primary");
+			$("#isjsed").removeClass("btn-primary").addClass("btn-default");
+		});
+		$("#isjsed").click(function (){
+			isjssj = false;
+			$(this).removeClass("btn-default").addClass("btn-primary");
+			$("#isjssj").removeClass("btn-primary").addClass("btn-default");
+		});
 	});
 })(window);

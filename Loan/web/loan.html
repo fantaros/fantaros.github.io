@@ -38,6 +38,14 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-md-2 text-right" style="font-size:16pt">还款方式:</div>
+			<div class="col-md-4">
+				<div class="btn-group">
+  					<button id="isdebj" type="button" class="btn btn-default">等额本金</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-2 text-right" style="font-size:16pt">提前还款额度:</div>
 			<div class="col-md-4">
 				<input id="tqhked" type="text" class="form-control" value="400000" />
@@ -48,16 +56,17 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2 text-right" style="font-size:16pt">还款方式:</div>
+			<div class="col-md-2 text-right" style="font-size:16pt">罚息:</div>
 			<div class="col-md-4">
-				<div class="btn-group">
-  					<button id="isdebj" type="button" class="btn btn-default">等额本金</button>
+				<div class="input-group">
+					<input id="fx" type="text" class="form-control" value="3" />
+					<span class="input-group-addon">%</span>
 				</div>
 			</div>
 			<div class="col-md-2 text-right" style="font-size:16pt">提前归还还款方式:</div>
 			<div class="col-md-4">
 				<div id="hkfs" class="btn-group">
-  					<button id="isjssj" type="button" class="btn btn-default">减少时间</button>
+  					<button id="isjssj" type="button" class="btn btn-primary">减少时间</button>
   					<button id="isjsed" type="button" class="btn btn-default">减少月还款额</button>
 				</div>
 			</div>
