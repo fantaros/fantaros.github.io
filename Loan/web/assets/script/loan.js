@@ -6,7 +6,18 @@
 	var gz = 7540;//8682+3074-4216
 	
 	$loan.addTimePayment = function (info, result){
-		
+		if(result != null && result.length > 0) {
+			var mlv = info.lv / 1200.0,
+			i, array, date, year, month, 
+			infoy = info.tqhksj.substr(0,4), 
+			infom = info.tqhksj.substr(4,2),
+			fxl = (+info.fx)/100.0, 
+			bjjs = (+info.tqhked) * (1-fxl), 
+			recalc = false,
+			firstre = false,
+			sydk, dic, permonth;
+			return result;
+		}
 	};
 	
 	$loan.addMoneyPayment = function (info, result){
@@ -21,15 +32,15 @@
 			firstre = false,
 			sydk, dic, permonth;
 
-			for(i=0;i<result;++i) {
+			for(i=0;i<result.length;++i) {
 				array = result[i];
 				if(recalc) {
 					if (firstre) {
 						lastarray = result[i-1];
 						sydk = +lastarray[2];
 						sydk = sydk - bjjs;
-						permonth = (sydk * mlv * Math.pow(mlv + 1, +(info.dkqs)))/(Math.pow(mlv + 1, +(info.dkqs)) - 1);
-						if(sybj > 0) {
+						permonth = (sydk * mlv * Math.pow(mlv + 1, +(info.dkqs - i)))/(Math.pow(mlv + 1, +(info.dkqs - i)) - 1);
+						if(sydk > 0) {
 							dqlx = sydk * mlv;
 							dqbj = permonth - dqlx;
 							sydk = sydk - dqbj;
@@ -66,6 +77,7 @@
 					}
 				}				
 			}
+			return result;
 		}
 	};
 	$loan.addPayment = function (info, result, type){

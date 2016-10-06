@@ -1,7 +1,7 @@
 (function (window, undefined){
 	var $ = window.jQuery,
 	isjssj = true,
-	currentResult;
+	currentResult, baseResult;
 	
 	function add (){
 		var info = {}, i, $tr, $td, $tbody = $("#maintable").find("tbody").eq(0),array,j;
@@ -27,10 +27,11 @@
 	}
 	
 	function calc (){
-		var info = {}, i, $tr, $td, $tbody = $("#maintable").find("tbody").eq(0),array,j;
+		var info = {}, i, $tr, $td, $tbody = $("#maintable").find("tbody").eq(0), array, j, narr;
 		$(".form-control").each(function (){
 			info[$(this).attr("id")] = $(this).val();
 		});
+//		baseResult = $loan.calculateLoan(info);
 		currentResult = $loan.calculateLoan(info);
 		if(currentResult != null && currentResult.length > 0) {
 			$tbody.html("");
@@ -62,5 +63,6 @@
 			$(this).removeClass("btn-default").addClass("btn-primary");
 			$("#isjssj").removeClass("btn-primary").addClass("btn-default");
 		});
+		calc();
 	});
 })(window);
