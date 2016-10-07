@@ -46,9 +46,7 @@
 							sydk = +array[2];
 							sydk = sydk - bjjs;
 							for(j=i+1;j<result.length;++j) {
-								dic = [];
-								dic.push(""+(j));
-								dic.push((""+year) + (month<10?"0"+(+month):""+month));
+								
 								month = (+month) + 1;
 								if(month > 12) {
 									year = (+year) + 1;
@@ -57,11 +55,26 @@
 								dqlx = sydk * mlv;
 								dqbj = oldpm - dqlx;
 								sydk = sydk - dqbj;
-								dic.push(""+sydk);
-								dic.push(""+oldpm);
-								dic.push(""+dqbj);
-								dic.push(""+dqlx);
-								dic.push(""+(gz - oldpm));
+								if(sydk < 0) {
+									dic = [];
+									dic.push(""+(j+1));
+									dic.push((""+year) + (month<10?"0"+(+month):""+month));
+									dic.push((+sydk).toFixed(4));
+									dic.push((+oldpm).toFixed(4));
+									dic.push((+dqbj).toFixed(4));
+									dic.push((+dqlx).toFixed(4));
+									dic.push((+(gz - oldpm)).toFixed(4));
+									nresult.push(dic);
+									return nresult;
+								}
+								dic = [];
+								dic.push(""+(j+1));
+								dic.push((""+year) + (month<10?"0"+(+month):""+month));
+								dic.push((+sydk).toFixed(4));
+								dic.push((+oldpm).toFixed(4));
+								dic.push((+dqbj).toFixed(4));
+								dic.push((+dqlx).toFixed(4));
+								dic.push((+(gz - oldpm)).toFixed(4));
 								nresult.push(dic);
 							}
 							return nresult;
@@ -97,11 +110,11 @@
 							dqlx = sydk * mlv;
 							dqbj = permonth - dqlx;
 							sydk = sydk - dqbj;
-							array[2] = (""+sydk);
-							array[3] = (""+permonth);
-							array[4] = (""+dqbj);
-							array[5] = (""+dqlx);
-							array[6] = (""+(gz - permonth));
+							array[2] = ((+sydk).toFixed(4));
+							array[3] = ((+permonth).toFixed(4));
+							array[4] = ((+dqbj).toFixed(4));
+							array[5] = ((+dqlx).toFixed(4));
+							array[6] = ((+(gz - permonth)).toFixed(4));
 							result[i] = array;
 						} else {
 							break;
@@ -111,11 +124,11 @@
 						dqlx = sydk * mlv;
 						dqbj = permonth - dqlx;
 						sydk = sydk - dqbj;
-						array[2] = (""+sydk);
-						array[3] = (""+permonth);
-						array[4] = (""+dqbj);
-						array[5] = (""+dqlx);
-						array[6] = (""+(gz - permonth));
+						array[2] = ((+sydk).toFixed(4));
+						array[3] = ((+permonth).toFixed(4));
+						array[4] = ((+dqbj).toFixed(4));
+						array[5] = ((+dqlx).toFixed(4));
+						array[6] = ((+(gz - permonth)).toFixed(4));
 						result[i] = array;
 					}
 				} else {
@@ -160,11 +173,11 @@
 			dqlx = sydk * mlv;
 			dqbj = permonth - dqlx;
 			sydk = sydk - dqbj;
-			dic.push(""+sydk);
-			dic.push(""+permonth);
-			dic.push(""+dqbj);
-			dic.push(""+dqlx);
-			dic.push(""+(gz - permonth));
+			dic.push((+sydk).toFixed(4));
+			dic.push((+permonth).toFixed(4));
+			dic.push((+dqbj).toFixed(4));
+			dic.push((+dqlx).toFixed(4));
+			dic.push((+(gz - permonth)).toFixed(4));
 			result.push(dic);
 		}
 		return result;
