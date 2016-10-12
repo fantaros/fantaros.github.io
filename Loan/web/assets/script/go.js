@@ -62,7 +62,7 @@
 		sydk = l.m, jgqs = 0, dylx, dybj,
 		tq, tqsssydk, tqsssyqs, tqssdylx, tqssdybj, tqssjgqs,
 		pc, tqdate, dqdate, nresult, recalc = false, firstre = true,
-		lastdic, summp, sumlx;
+		lastdic, summp, sumlx, txt, rtx;
 		
 		if(inputpl != null && inputpl.length > 0 && inputpla != null && inputpla.length > 0) {
 			pl = inputpl;
@@ -193,28 +193,26 @@
 		}
 		
 		rtext = "";
-		
+		rtx = "";
 		summp = 0;
 		sumlx = 0;
 		
 		for(i = 0;i < keys.length; ++i) {
 			if(i == 0) {
-				txt = keys[i];
+				rtx = keys[i];
 			} else {
-				txt = txt + "," + keys[i];
+				rtx = rtx + "," + keys[i];
 			}
 		}
-		
-		rtext = rtext + txt + "\r\n";
-		
+		rtx = rtx + "\r\n";
 		for(i = 0; i < result.length; ++i) {
 			
-			rtext = rtext + tocsv(result[i], keys) + "\r\n";
+			rtx = rtx + tocsv(result[i], keys) + "\r\n";
 			summp = summp + (+result[i]["当月还款"]);
 			sumlx = sumlx + (+result[i]["当月利息"]);
 		}
 		
-		rtext = rtext + "\r\n" + "总期数:," + result.length + ",总还:," + summp.toFixed(3) + ",总利息:," + sumlx.toFixed(3) +"\r\n";
+		rtext = rtext + "总期数:," + result.length + ",总还:," + summp.toFixed(3) + ",总利息:," + sumlx.toFixed(3) +"\r\n\r\n";
 		
 		rtext = rtext + "还款方法:\r\n";
 		
@@ -232,7 +230,9 @@
 			txt = txt + "\r\n";
 		}
 		
-		rtext = rtext + txt;
+		rtext = rtext + txt + "\r\n";
+		
+		rtext = rtext + rtx;
 		
 		$("#resultregion")
 			.width(document.body.scrollWidth - 8)
