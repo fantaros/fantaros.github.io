@@ -27,11 +27,12 @@
 			infoy = info.tqhksj.substr(0,4), 
 			infom = info.tqhksj.substr(4,2),
 			fxl = (+info.fx)/100.0, 
+			dkqs = result.length, 
 			bjjs = (+info.tqhked) * (1-fxl), 
 			recalc = false,
 			firstre = false,
 			sydk, dic, dkqs = +info.dkqs,
-			oldpm = ((+info.dked) * mlv * Math.pow(mlv + 1, +(info.dkqs)))/(Math.pow(mlv + 1, +(info.dkqs)) - 1);
+			oldpm;
 			nresult = [];
 			for(i=0;i<result.length;++i) {
 				array = result[i];
@@ -45,6 +46,7 @@
 							//重新计算剩余期数
 							sydk = +array[2];
 							sydk = sydk - bjjs;
+							oldpm = ((+sydk) * mlv * Math.pow(mlv + 1, +(dkqs - i)))/(Math.pow(mlv + 1, +(dkqs - i)) - 1)
 							for(j=i+1;j<result.length;++j) {
 								
 								month = (+month) + 1;
@@ -141,7 +143,7 @@
 							firstre = true;
 						}
 					}
-				}				
+				}
 			}
 			return result;
 		}
