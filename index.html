@@ -25,7 +25,7 @@
             var code = codei.value;
             var name = namei.value;
             var tester = hashCode(name);
-            if (code == tester) {
+            if (code != null && code != "" && code == tester) {
                 window.location.href = "https://hd.faisco.cn/16082306/8h7rhXxHbJI2clmzRrccsw/load.html?style=0&t=" + 10000 * Math.random();
             } else {
                 gotoact.innerHTML = "您输入了错误的活动代码无法进入活动！";
