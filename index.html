@@ -1,45 +1,89 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>参与活动</title>
-    <script>
-        hashCode = function hashCode(str) {
-            var hash = 0;
-            if (str.length == 0) return hash;
-            for (i = 0; i < str.length; i++) {
-                char = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash; // Convert to 32bit integer
-            }
-            return hash;
-        }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        function testCode() {
-            var gotoact = document.getElementById("gotoact");
-            if (gotoact.innerHTML = "您输入了错误的活动代码无法进入活动！") {
-                gotoact.innerHTML = "参与活动";
-            }
-            var namei = document.getElementById("name");
-            var codei = document.getElementById("code");
-            var code = codei.value;
-            var name = namei.value;
-            var tester = hashCode(name);
-            if (code != null && code != "" && code == tester) {
-                window.location.href = "https://hd.faisco.cn/16082306/8h7rhXxHbJI2clmzRrccsw/load.html?style=0&t=" + 10000 * Math.random();
-            } else {
-                gotoact.innerHTML = "您输入了错误的活动代码无法进入活动！";
-            }
-        }
-    </script>
+    <title>参与活动</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./asset/style.css" type="text/css">
 </head>
 
 <body>
-    <label>客户名称</label><input id="name" /><br/>
-    <hr/>
-    <label>活动代码</label><input id="code" /><br/>
-    <hr/>
-    <button id="gotoact" onclick="testCode();">参与活动</button>
+
+    <div class="cont">
+        <div class="demo">
+            <div class="login">
+                <div class="login__check"></div>
+                <div class="login__form">
+                    <div class="login__row">
+                        <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8"></path>
+          </svg>
+                        <input type="text" id="name" class="login__input name" placeholder="客户名称">
+                    </div>
+                    <div class="login__row">
+                        <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0"></path>
+          </svg>
+                        <input type="text" id="code" class="login__input pass" placeholder="活动代码">
+                    </div>
+                    <button id="gotoact" type="button" class="login__submit">进入活动</button>
+                </div>
+            </div>
+            <div class="app">
+                <div class="app__top">
+                    <div class="app__menu-btn">
+                        <span></span>
+                    </div>
+                    <svg class="app__icon search svg-icon" viewBox="0 0 20 20">
+          <!-- yeap, its purely hardcoded numbers straight from the head :D (same for svg above) -->
+          <path d="M20,20 15.36,15.36 a9,9 0 0,1 -12.72,-12.72 a 9,9 0 0,1 12.72,12.72"></path>
+        </svg>
+                    <p class="app__hello">Good Morning!</p>
+                    <div class="app__user">
+                        <span class="app__user-notif">3</span>
+                    </div>
+                    <div class="app__month">
+                        <span class="app__month-btn left"></span>
+                        <p class="app__month-name">March</p>
+                        <span class="app__month-btn right"></span>
+                    </div>
+                </div>
+                <div class="app__bot">
+                    <div class="app__days">
+                        <div class="app__day weekday">Sun</div>
+                        <div class="app__day weekday">Mon</div>
+                        <div class="app__day weekday">Tue</div>
+                        <div class="app__day weekday">Wed</div>
+                        <div class="app__day weekday">Thu</div>
+                        <div class="app__day weekday">Fri</div>
+                        <div class="app__day weekday">Sad</div>
+                        <div class="app__day date">8</div>
+                        <div class="app__day date">9</div>
+                        <div class="app__day date">10</div>
+                        <div class="app__day date">11</div>
+                        <div class="app__day date">12</div>
+                        <div class="app__day date">13</div>
+                        <div class="app__day date">14</div>
+                    </div>
+                </div>
+                <div class="app__logout">
+                    <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"></path>
+        </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./asset/jquery.min.js"></script>
+    <script type="text/javascript" src="./asset/index.js"></script>
 </body>
 
 </html>
