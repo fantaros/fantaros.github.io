@@ -16,6 +16,10 @@
         }
 
         function testCode() {
+            var gotoact = document.getElementById("gotoact");
+            if (gotoact.innerHTML = "您输入了错误的活动代码无法进入活动！") {
+                gotoact.innerHTML = "参与活动";
+            }
             var namei = document.getElementById("name");
             var codei = document.getElementById("code");
             var code = codei.value;
@@ -23,6 +27,8 @@
             var tester = hashCode(name);
             if (code == tester) {
                 window.location.href = "https://hd.faisco.cn/16082306/8h7rhXxHbJI2clmzRrccsw/load.html?style=0&t=" + 10000 * Math.random();
+            } else {
+                gotoact.innerHTML = "您输入了错误的活动代码无法进入活动！";
             }
         }
     </script>
@@ -31,7 +37,7 @@
 <body>
     <label>客户名称</label><input id="name" />
     <label>活动代码</label><input id="code" />
-    <button onclick="testCode();">参与活动</button>
+    <button id="gotoact" onclick="testCode();">参与活动</button>
 </body>
 
 </html>
