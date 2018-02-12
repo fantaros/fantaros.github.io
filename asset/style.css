@@ -6,6 +6,41 @@
     padding: 0;
 }
 
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: whitesmoke;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: whitesmoke;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: whitesmoke;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: whitesmoke;
+}
+
+select {
+    margin-left: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: solid 1px white;
+    font-size: 14px;
+    height: 90%;
+    text-align: center;
+    appearance: none;
+    color: whitesmoke;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
 html,
 body {
     font-size: 62.5%;
