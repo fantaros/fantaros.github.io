@@ -45,11 +45,11 @@ $(document).ready(function() {
         }
         code = $("#code").val();
         name = $("#name").val();
-        if (code != null && code != "" && code == hashCode(name)) {
-            window.location.href = "https://hd.faisco.cn/16082275/gG4xeQ-SYDsoOziSd3q8Vg/load.html?style=0&t=" + 10000 * Math.random();
-        } else {
-            alert("您输入了错误的活动代码无法进入活动！");
-        }
+        //if (code != null && code != "" && code == hashCode(name)) {
+        window.location.href = "https://hd.faisco.cn/16082275/gG4xeQ-SYDsoOziSd3q8Vg/load.html?style=0&t=" + 10000 * Math.random();
+        //} else {
+        //alert("您输入了错误的活动代码无法进入活动！");
+        //}
     });
 
     $(document).on("click", ".app__logout", function(e) {
