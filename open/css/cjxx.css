@@ -1,0 +1,205 @@
+.titleContent {
+    background-image: url('../images/header.png');
+    background-size: 100%;
+    font-size: 18px;
+    width: 100%;
+    height: 5rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+hr {
+    height: 1px;
+    background-color: #979797;
+}
+
+.sectionContent {
+    width: 100%;
+}
+
+.region {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.center {
+    margin: 0px auto;
+}
+
+.centerTipContent {
+    width: 100%;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+}
+
+.h1Content {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #333;
+    text-align: left;
+}
+
+.tipContent {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #333;
+    text-align: left;
+}
+
+.imageContent {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #333;
+    text-align: left;
+    float: left;
+}
+
+.imageCell3 {
+    width: 33%;
+    font-size: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #333;
+    text-align: left;
+    float: left;
+    margin: 0px auto;
+}
+
+.imageCell4 {
+    width: 24.9%;
+    font-size: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #333;
+    text-align: left;
+    float: left;
+    margin: 0px auto;
+}
+
+.imageCell3 img{
+    width: 75px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.imageCell4 img{
+    width: 75px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.imageCell3 div {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #666666;
+}
+
+.imageCell4 div {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #666666;
+}
+
+.step {
+    width: 100%;
+}
+
+.step div {
+    width: 100%;
+    padding-left: 30px;
+    padding-right:30px;
+    font-size: 11px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 15px;
+}
+
+.step div.line {
+    height: 1px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.mainP {
+    width: 100%;
+    font-size: 12px;
+}
+
+.tableContent {
+    width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.tableContent table {
+    width: 100%;
+    border: 1px solid #979797;
+}
+
+.tableContent table td {
+    text-align: center;
+    vertical-align: middle;
+    color: #666;
+    font-size: 10px;
+}
+
+.tableContent table td div {
+    text-align: left;
+    vertical-align: middle;
+    color: #666;
+    font-size: 10px;
+    line-height: 200%;
+}
+
+.tableContent table td div b {
+    color: #333;
+}
+
+.tableContent table td[colspan='5'] {
+    width: 18%;
+    border-right: 1px solid #979797;
+    color: #333;
+}
+
+.tableContent table td[colspan='7'] {
+    width: 82%;
+    padding: 8px 8px;
+    color: #666;
+}
+
+.tableContent table td[colspan='12'] {
+    width: 100%;
+    padding: 8px 2px;
+}
+
+.tableContent table tr {
+    border-top: 1px solid #979797;
+}

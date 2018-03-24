@@ -1,0 +1,189 @@
+.mainContent div.highLight {
+	font-size: 14px;
+	color: #333333;
+	letter-spacing: 0;
+	line-height: 21px;
+}
+
+.mainContent div.leftContent {
+	float: left;
+	width: 10%;
+	font-size: 14px;
+	color: #666;
+	letter-spacing: 0;
+	line-height: 21px;
+	text-align: center;
+}
+
+.mainContent div.rightContent {
+	float: left;
+	width: 89%;
+	font-size: 14px;
+	color: #666;
+	letter-spacing: 0;
+	line-height: 21px;
+	text-align: left;
+}
+
+.mainContent div.headContent {
+	text-align: center;
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.mainContent div.titleRegion {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mainContent div.titleContent {
+	background: #FAFAFA;
+	border-radius: 4px;
+	border: none;
+	border-left: 4px solid #DC5A64;
+	height: 36px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	vertical-align: middle;
+	display:flex;
+	display: -webkit-flex;
+	align-items:center;
+}
+
+.mainContent div.titleContent span {
+	padding-left: 28px;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.titleContent div {
+	padding-left: 28px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	letter-spacing: 0;
+	vertical-align: middle;
+}
+
+.mainContent div.tableContent {
+    width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+
+.mainContent div.tableContent table {
+    width: 100%;
+    border: 1px solid #999;
+}
+
+.mainContent div.tableContent table td {
+    text-align: center;
+    vertical-align: middle;
+    color: #666;
+    font-size: 10px;
+}
+
+.mainContent div.tableContent table td div {
+    text-align: left;
+    vertical-align: middle;
+    color: #666;
+    font-size: 10px;
+    line-height: 200%;
+}
+
+.mainContent div.tableContent table td div b {
+    color: #333;
+}
+
+.mainContent div.tableContent table.tableSzz td[colspan='2'] {
+    width: 16.67%;
+    border-right: 1px solid #999;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.tableContent table.tableSzz td[colspan='4'] {
+    width: 33.32%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.tableContent table.tableTpz td[colspan='2'] {
+    width: 16.67%;
+    border-right: 1px solid #999;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.tableContent table.tableTpz td[colspan='4'] {
+    width: 33.32%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+	border-right: 1px solid #999;
+}
+
+.mainContent div.tableContent table.tableTpz td[colspan='8'] {
+    width: 66.68%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.tableContent table.tableTpz td[colspan='12'] {
+    width: 100%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.mainContent div.tableContent table.tableETF td[colspan='4'] {
+    width: 33.32%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+	border-right: 1px solid #999;
+}
+
+.mainContent div.tableContent table.tableETF td[colspan='8'] {
+    width: 66.68%;
+    font-size: 10px;
+	color: #333333;
+	letter-spacing: 0;
+	border-right: 1px solid #999;
+}
+
+.mainContent div.tableContent table tr {
+    border-top: 1px solid #999;
+}
+
+.mainContent {
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0;
+	line-height: 21px;
+	width: 100%;
+	padding: 0px 4px;
+}
+
+.mainContent div {
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0;
+	line-height: 21px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
