@@ -12,6 +12,16 @@
     color: white;
 }
 
+.mainContent {
+    position: fixed;
+    overflow: scroll;
+}
+
+.mainContentLocked {
+    position: fixed;
+    overflow: hidden;
+}
+
 hr {
     height: 1px;
     background-color: #979797;

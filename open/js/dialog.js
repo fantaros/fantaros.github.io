@@ -1,6 +1,8 @@
 $(function() {
     var h = $(window).height();
 
+    $("main").css("height", ""+h+"px");
+
     function abs(n) {
         var abs = +n;
         if (abs < 0) {
@@ -29,7 +31,8 @@ $(function() {
     $("#dialoghref").click(function() {
         var top = getTop();
         $("#listDialog").attr("style", "top:" + top + "px;");
-        $("body").attr("style", "top: -" + top + "px; position: fixed;");
+        $("main").addClass("mainContentLocked").removeClass("mainContent");
+        //$("body").attr("style", "top: -" + top + "px; position: fixed;");
         $("#listDialog").attr("open", "open").show();
     });
 
@@ -38,24 +41,27 @@ $(function() {
         //$("#mainPage").hide();
         $("#imgSrcControl").attr("src", $(this).attr("src"));
         $("#imgDialog").attr("style", "top:" + top + "px;");
-        $("body").attr("style", "top: -" + top + "px; position: fixed;");
+        $("main").addClass("mainContentLocked").removeClass("mainContent");
+        //$("body").attr("style", "top: -" + top + "px; position: fixed;");
         $("#imgDialog").attr("open", "open").show();
         //$("#mainPage").show();
     });
 
     $(".closedialogbutton").click(function() {
         var top = parseInt($("#listDialog").css("top"));
-        $("body").attr("style", "top: 0px; position: static;");
+        //$("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
-        window.scrollTo(0, abs(top));
+        $("main").addClass("mainContent").removeClass("mainContentLocked");
+        //window.scrollTo(0, abs(top));
         //window.location.reload();
     });
 
     $("#imgDialogContent").click(function() {
         var top = parseInt($("#imgDialog").css("top"));
-        $("body").attr("style", "top: 0px; position: static;");
+        //$("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
-        window.scrollTo(0, abs(top));
+        $("main").addClass("mainContent").removeClass("mainContentLocked");
+        //window.scrollTo(0, abs(top));
         //window.location.reload();
     });
 });
