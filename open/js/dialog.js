@@ -25,15 +25,20 @@ $(function() {
 
     $(".closedialogbutton").click(function() {
         //$("#headposition").click();
+        var top = parseInt($("body").css("top"));
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
-        document.body.scrollTo(0, parseInt($("#listDialog").css("top")));
+        document.body.scrollTo(0, top);
+        document.body.scrollTop = top;
     });
 
     $("#imgDialogContent").click(function() {
         //$("#headposition").click();
+        var top = parseInt($("body").css("top"));
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
-        document.body.scrollTo(0, parseInt($("#imgDialog").css("top")));
+        document.body.scrollTo(0, top);
+        document.body.scrollTop = top;
+        //document.body.scrollTo(0, parseInt($("#imgDialog").css("top")));
     });
 });
