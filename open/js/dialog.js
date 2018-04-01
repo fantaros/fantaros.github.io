@@ -26,7 +26,7 @@ $(function() {
     }
 
     $("#listDialogContent").css("margin-top", ("" + ((h - 456) / 2)) + "px");
-    $("#imgDialogContent").css("margin-top", ("" + ((h - 544) / 2)) + "px");
+    $("#imgDialogContent").css("margin-top", ("" + ((h - 560) / 2)) + "px");
 
     $("#dialoghref").click(function() {
         var top = getTop();
