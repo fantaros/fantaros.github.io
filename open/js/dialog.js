@@ -29,29 +29,33 @@ $(function() {
     $("#dialoghref").click(function() {
         var top = getTop();
         $("#listDialog").attr("style", "top:" + top + "px;");
-        $("body").attr("style", "top: -" + top + "px; position: fixed;");
+        $("body").attr("style", "top: -" + top + "px; position: fixed; will-change: transform;");
         $("#listDialog").attr("open", "open").show();
     });
 
     $(".imgFocus").click(function() {
         var top = getTop();
-        $("#imgDialog").attr("style", "top:" + top + "px;");
+        //$("#mainPage").hide();
         $("#imgSrcControl").attr("src", $(this).attr("src"));
-        $("body").attr("style", "top: -" + top + "px; position: fixed;");
+        $("#imgDialog").attr("style", "top:" + top + "px;");
+        $("body").attr("style", "top: -" + top + "px; position: fixed; will-change: transform;");
         $("#imgDialog").attr("open", "open").show();
+        //$("#mainPage").show();
     });
 
     $(".closedialogbutton").click(function() {
-        var top = parseInt($("body").css("top"));
+        var top = parseInt($("#listDialog").css("top"));
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
         window.scrollTo(0, abs(top));
+        window.location.reload();
     });
 
     $("#imgDialogContent").click(function() {
-        var top = parseInt($("body").css("top"));
+        var top = parseInt($("#imgDialog").css("top"));
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
         window.scrollTo(0, abs(top));
+        window.location.reload();
     });
 });
