@@ -1,7 +1,7 @@
 $(function() {
     var h = $(window).height();
 
-    $("main").css("height", ""+h+"px");
+    $("main").css("height", "" + h + "px");
 
     function abs(n) {
         var abs = +n;
@@ -26,7 +26,7 @@ $(function() {
     }
 
     $("#listDialogContent").css("margin-top", ("" + ((h - 456) / 2)) + "px");
-    $("#imgDialogContent").css("margin-top", ("" + ((h - 560) / 2)) + "px");
+    $("#imgDialogContent").css("margin-top", ("" + ((h - 550) / 2)) + "px");
 
     $("#dialoghref").click(function() {
         var top = getTop();
