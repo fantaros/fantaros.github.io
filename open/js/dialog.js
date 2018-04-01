@@ -29,7 +29,7 @@ $(function() {
     $("#dialoghref").click(function() {
         var top = getTop();
         $("#listDialog").attr("style", "top:" + top + "px;");
-        $("body").attr("style", "top: -" + top + "px; position: fixed; will-change: transform;");
+        $("body").attr("style", "top: -" + top + "px; position: fixed;");
         $("#listDialog").attr("open", "open").show();
     });
 
@@ -38,7 +38,7 @@ $(function() {
         //$("#mainPage").hide();
         $("#imgSrcControl").attr("src", $(this).attr("src"));
         $("#imgDialog").attr("style", "top:" + top + "px;");
-        $("body").attr("style", "top: -" + top + "px; position: fixed; will-change: transform;");
+        $("body").attr("style", "top: -" + top + "px; position: fixed;");
         $("#imgDialog").attr("open", "open").show();
         //$("#mainPage").show();
     });
@@ -48,7 +48,7 @@ $(function() {
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
         window.scrollTo(0, abs(top));
-        window.location.reload();
+        //window.location.reload();
     });
 
     $("#imgDialogContent").click(function() {
@@ -56,6 +56,6 @@ $(function() {
         $("body").attr("style", "top: 0px; position: static;");
         $(".dialogRegion").removeAttr("open").hide();
         window.scrollTo(0, abs(top));
-        window.location.reload();
+        //window.location.reload();
     });
 });
