@@ -1,0 +1,177 @@
+.titleContent {
+    background: #21203C;
+    background-size: 100%;
+    font-size: 18px;
+    width: 100%;
+    height: 4rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 4rem;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+.mainContent {
+    z-index: 500;
+    position: fixed;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-180deg, #24213E 0%, #37325E 100%);
+}
+
+.mainContentLocked {
+    z-index: 500;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-180deg, #24213E 0%, #37325E 100%);
+}
+
+.detailContent {
+    z-index: 700;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ucDetail {
+    position: absolute;
+    z-index: 900;
+    bottom: 16px;
+    left: 0px;
+    width: 100%;
+    padding: 0px 4% 0px 4%;
+}
+
+.wxDetail {
+    position: absolute;
+    z-index: 900;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    padding: 0px 8% 0px 30%;
+}
+
+.backImageHolder {
+    width: 100%;
+    background: #423E64;
+    padding: 4px 4px 2px 4px;
+}
+
+.backImage {
+    width: 100%;
+    height: 100%;
+}
+
+.vipCode {
+    position: relative;
+    width: 200px;
+    bottom: 44px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 5px;
+    line-height: 24px;
+    height: 24px;
+}
+
+.waveImageHolder {
+    width: 100%;
+}
+
+.bannerImageHolder{
+    width: 100%;
+    padding: 0px 22px 0px 22px;
+}
+
+.detailMessage {
+    position: relative;
+    width: 100%;
+    bottom: 44px;
+    left: 0px;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 5px;
+    line-height: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.inputLabel {
+    margin-top: 15px;
+    padding: 0px 23px 0px 23px;
+    width: 100%;
+    font-size: 15px;
+    color: #9FADDD;
+    letter-spacing: 0;
+}
+
+.inputHolder {
+    margin-top: 15px;
+    padding: 0px 23px 0px 23px;
+    width: 100%;
+    height: 40px;
+}
+
+.inputControl {
+    border: 1px solid #9FADDD;
+    border-radius: 10px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+}
+
+span.phoneButton {
+    font-size: 12px;    
+    border: 1px solid #9FADDD;
+    background-color: #9FADDD;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.submitButtonHolder {
+    margin-top: 50px;
+    padding: 0px 64px 0px 64px;
+    width: 100%;
+    height: 40px;
+}
+
+.submitButton {
+    width: 100%;
+    background: #5E6B99;
+    border-radius: 4px;
+    height: 40px;
+    color: white;
+    border: 0px none;
+}
+
+.floatBox {
+    float: left;
+    width: 100%;
+}
+
+.halfFloatBox {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.halfButton {
+    width: 80%;
+    background: #5E6B99;
+    border-radius: 4px;
+    height: 40px;
+    color: white;
+    border: 0px none;
+}
