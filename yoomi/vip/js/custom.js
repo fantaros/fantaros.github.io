@@ -12,23 +12,18 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        if (/android/i.test(navigator.userAgent)) {
-            var self = this;
-            window.setTimeout(function() {
-                self.scrollIntoView(true);
-                document.body.style.top = "-100px";
-            }, 1000);
-        }
+        //if (/android/i.test(navigator.userAgent)) {
+        var self = this;
+        window.setTimeout(function() {
+            self.scrollIntoView(true);
+            $("main.mainContent").css("top", "-200px");
+        }, 500);
+        //}
     });
 
     $("input.focusInput").on("blur", function() {
-        if (/android/i.test(navigator.userAgent)) {
-            var self = this;
-            window.setTimeout(function() {
-                self.scrollIntoView(true);
-                document.body.style.top = "0px";
-            }, 1000);
-        }
+        this.scrollIntoView(true);
+        $("main.mainContent").css("top", "0px");
     });
 
     function startTimeout() {
