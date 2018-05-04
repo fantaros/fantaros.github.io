@@ -10,14 +10,15 @@ $(function() {
         $("div.backImageHolder").height($("img.backImage").height());
     };
 
-    if (/android/i.test(navigator.userAgent)) {
-        $("input.focusInput").on("focus", function() {
+
+    $("input.focusInput").on("focus", function() {
+        if (/android/i.test(navigator.userAgent)) {
             var self = this;
             window.setTimeout(function() {
                 self.scrollIntoView(true);
             }, 200);
-        });
-    }
+        }
+    });
 
     function startTimeout() {
         var timeText;
