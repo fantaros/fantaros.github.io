@@ -13,11 +13,8 @@ $(function() {
 
     $("input.focusInput").on("focus", function() {
         if (/android/i.test(navigator.userAgent)) {
-            var self = this;
-            window.setTimeout(function() {
-                self.scrollIntoView(true);
-                $("main.mainContent").css("top", "-180px");
-            }, 500);
+            this.scrollIntoView(true);
+            $("main.mainContent").css("top", "-180px");
         }
     });
 
