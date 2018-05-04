@@ -12,13 +12,13 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        //if (/android/i.test(navigator.userAgent)) {
-        var self = this;
-        window.setTimeout(function() {
-            self.scrollIntoView(true);
-            $("main.mainContent").css("top", "-200px");
-        }, 500);
-        //}
+        if (/android/i.test(navigator.userAgent)) {
+            var self = this;
+            window.setTimeout(function() {
+                self.scrollIntoView(true);
+                $("main.mainContent").css("top", "-180px");
+            }, 500);
+        }
     });
 
     $("input.focusInput").on("blur", function() {
