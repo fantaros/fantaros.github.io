@@ -10,6 +10,15 @@ $(function() {
         $("div.backImageHolder").height($("img.backImage").height());
     };
 
+    if (/android/i.test(navigator.userAgent)) {
+        $("input.focusInput").on("focus", function() {
+            var self = this;
+            window.setTimeout(function() {
+                self.scrollIntoView(true);
+            }, 200);
+        });
+    }
+
     function startTimeout() {
         var timeText;
         if (timeLeft < 1) {

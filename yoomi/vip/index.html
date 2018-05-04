@@ -24,28 +24,44 @@
 </head>
 
 <body>
+    <input id="isUsed" type="hidden" />
     <main class="mainContent">
         <div class="titleContent">全真派</div>
         <div class="backImageHolder" style="height: 229px;">
             <img src="images/back.png" alt="✫" class="backImage" />
             <div class="vipCode">62100001</div>
         </div>
-        <div class="waveImageHolder">
-            <img src="images/wave.png" alt="~" class="backImage" />
-        </div>
-        <div class="inputLabel">请输入电话号码</div>
-        <div class="inputHolder">
-            <div class="input-group">
-                <input type="phone" class="form-control inputControl">
-                <span id="getCaptchaCodeButton" class="input-group-addon phoneButton" style="letter-spacing: 0;">点击获取验证码</span>
+        <div id="registRegion" style="display: block;">
+            <div class="waveImageHolder">
+                <img src="images/wave.png" alt="~" class="backImage" />
+            </div>
+            <div class="inputLabel">请输入电话号码</div>
+            <div class="inputHolder">
+                <div class="input-group">
+                    <input type="phone" class="form-control inputControl focusInput">
+                    <span id="getCaptchaCodeButton" class="input-group-addon phoneButton" style="letter-spacing: 0;">点击获取验证码</span>
+                </div>
+            </div>
+            <div class="inputLabel">请输入验证码</div>
+            <div class="inputHolder">
+                <input id="captcha" type="number" class="form-control inputControl focusInput">
+            </div>
+            <div class="submitButtonHolder">
+                <button id="submitButton" class="submitButton">确定</button>
             </div>
         </div>
-        <div class="inputLabel">请输入验证码</div>
-        <div class="inputHolder">
-            <input id="captcha" type="number" class="form-control inputControl">
+        <div class="bannerImageHolder">
+            <img id="bannerImage" src="images/binded.png" alt="✫" class="backImage" />
+            <div id="bannerMessage" class="detailMessage">靓号已绑定成功</div>
         </div>
-        <div class="submitButtonHolder">
-            <button id="submitButton" class="submitButton">确定</button>
+
+        <div class="floatBox">
+            <div class="halfFloatBox">
+                <button class="halfButton">下载</button>
+            </div>
+            <div class="halfFloatBox">
+                <button class="halfButton shareButton">去分享</button>
+            </div>
         </div>
     </main>
 
@@ -71,6 +87,7 @@
     <script src="js/dialog.js" type="text/javascript"></script>
     <!-- custom -->
     <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/used.js" type="text/javascript"></script>
 </body>
 
 </html>
