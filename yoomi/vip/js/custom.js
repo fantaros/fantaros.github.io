@@ -16,7 +16,7 @@ $(function() {
             var self = this;
             window.setTimeout(function() {
                 self.scrollIntoView(true);
-            }, 200);
+            }, 5000);
         }
     });
 
