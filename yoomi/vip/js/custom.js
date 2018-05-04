@@ -16,7 +16,18 @@ $(function() {
             var self = this;
             window.setTimeout(function() {
                 self.scrollIntoView(true);
-            }, 5000);
+                document.body.style.top = "-100px";
+            }, 1000);
+        }
+    });
+
+    $("input.focusInput").on("blur", function() {
+        if (/android/i.test(navigator.userAgent)) {
+            var self = this;
+            window.setTimeout(function() {
+                self.scrollIntoView(true);
+                document.body.style.top = "0px";
+            }, 1000);
         }
     });
 
