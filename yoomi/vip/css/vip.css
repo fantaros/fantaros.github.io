@@ -86,6 +86,25 @@
     width: 100%;
 }
 
+.bannerImageHolder{
+    width: 100%;
+    padding: 0px 22px 0px 22px;
+}
+
+.detailMessage {
+    position: relative;
+    width: 100%;
+    bottom: 44px;
+    left: 0px;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 5px;
+    line-height: 24px;
+    height: 24px;
+    text-align: center;
+}
+
 .inputLabel {
     margin-top: 15px;
     padding: 0px 23px 0px 23px;
@@ -111,7 +130,7 @@
 }
 
 span.phoneButton {
-    font-size: 12px;
+    font-size: 12px;    
     border: 1px solid #9FADDD;
     background-color: #9FADDD;
     color: white;
@@ -129,6 +148,27 @@ span.phoneButton {
 
 .submitButton {
     width: 100%;
+    background: #5E6B99;
+    border-radius: 4px;
+    height: 40px;
+    color: white;
+    border: 0px none;
+}
+
+.floatBox {
+    float: left;
+    width: 100%;
+}
+
+.halfFloatBox {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.halfButton {
+    width: 80%;
     background: #5E6B99;
     border-radius: 4px;
     height: 40px;

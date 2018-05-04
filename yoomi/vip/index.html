@@ -26,7 +26,7 @@
 <body>
     <main class="mainContent">
         <div class="titleContent">全真派</div>
-        <div class="backImageHolder">
+        <div class="backImageHolder" style="height: 229px;">
             <img src="images/back.png" alt="✫" class="backImage" />
             <div class="vipCode">62100001</div>
         </div>
@@ -37,12 +37,12 @@
         <div class="inputHolder">
             <div class="input-group">
                 <input type="phone" class="form-control inputControl">
-                <span id="getCapchaCodeButton" class="input-group-addon phoneButton" style="letter-spacing: 0;">点击获取验证码</span>
+                <span id="getCaptchaCodeButton" class="input-group-addon phoneButton" style="letter-spacing: 0;">点击获取验证码</span>
             </div>
         </div>
         <div class="inputLabel">请输入验证码</div>
         <div class="inputHolder">
-            <input type="number" class="form-control inputControl">
+            <input id="captcha" type="number" class="form-control inputControl">
         </div>
         <div class="submitButtonHolder">
             <button id="submitButton" class="submitButton">确定</button>

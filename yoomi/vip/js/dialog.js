@@ -23,12 +23,12 @@ $(function () {
         $("main").addClass("mainContentLocked").removeClass("mainContent");
         //默认图片路径设置
         if (imgsrc == null) {
-            imgsrc = "images/binded.png";
+            imgsrc = "images/error.png";
         }
         //设置提示框图片位置
         $("#alertDetailImage").attr("src", imgsrc);
         //默认信息是 操作成功
-        $("#alertDetailText").text(info || "操作成功");
+        $("#alertDetailText").text(info || "验证码输入错误");
         //显示alert框
         $("#alertDialog").attr("open", "open").show();
 
