@@ -12,7 +12,7 @@ $(function() {
     };
 
 
-    /*$("input.focusInput").on("focus", function() {
+    $("input.focusInput").on("focus", function() {
         if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
@@ -24,7 +24,7 @@ $(function() {
         $("main.mainContent").css("top", "0px");
     });
 
-    $(window).on("resize", function (){
+    /*$(window).on("resize", function (){
         var newH = $(window).height();
         if (newH != oldH) {
             oldH = newH;
@@ -37,9 +37,9 @@ $(function() {
         if(document.body.clientHeight < 500 && (/android/i.test(navigator.userAgent)) ) {
             $("main.mainContent").css("top", "-180px");
         }else{
-             if(parseInt($("main.mainContent").css("top")) < 0){
+             //if(parseInt($("main.mainContent").css("top")) < 0){
                 $("main.mainContent").css("top", "0px");
-             }
+             //}
         }
     }
 
