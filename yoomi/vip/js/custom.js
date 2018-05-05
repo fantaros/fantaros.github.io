@@ -34,7 +34,7 @@ $(function() {
     });*/
     
     window.onresize = function(){
-        if(document.body.clientHeight < 500 ) {
+        /*if(document.body.clientHeight < 500 ) {
             //if (/android/i.test(navigator.userAgent)) {
             $("main.mainContent").css("top", "-180px");
             //}
@@ -42,7 +42,15 @@ $(function() {
              //if(parseInt($("main.mainContent").css("top")) < 0){
                 $("main.mainContent").css("top", "0px");
              //}
+        }*/
+        var newH = $(window).height();
+        if (newH < oldH) {
+            //this.scrollIntoView(true);
+            $("main.mainContent").css("top", "-180px");
+        } else {
+            $("main.mainContent").css("top", "0px");
         }
+        oldH = newH;
     }
 
     function startTimeout() {
