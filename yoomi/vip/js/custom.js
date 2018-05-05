@@ -33,7 +33,7 @@ $(function() {
         }
     });*/
     
-    window.onresize = function(){
+    $(window).resize(function(){
         /*if(document.body.clientHeight < 500 ) {
             //if (/android/i.test(navigator.userAgent)) {
             $("main.mainContent").css("top", "-180px");
@@ -50,7 +50,7 @@ $(function() {
         } else {
             $("main.mainContent").css("top", "0px");
         }
-    }
+    });
 
     function startTimeout() {
         var timeText;
