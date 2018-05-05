@@ -12,7 +12,7 @@ $(function() {
     };
 
 
-    $("input.focusInput").on("focus", function() {
+    /*$("input.focusInput").on("focus", function() {
         if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
@@ -20,7 +20,7 @@ $(function() {
     });
 
     $("input.focusInput").on("blur", function() {
-        this.scrollIntoView(true);
+        //this.scrollIntoView(true);
         $("main.mainContent").css("top", "0px");
     });
 
@@ -31,7 +31,17 @@ $(function() {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "0px");
         }
-    });
+    });*/
+    
+    window.onresize = function(){
+        if(document.body.clientHeight < 500 && (/android/i.test(navigator.userAgent)) ) {
+            $("main.mainContent").css("top", "-180px");
+        }else{
+             if(parseInt($("main.mainContent").css("top")) < 0){
+                $("main.mainContent").css("top", "0px");
+             }
+        }
+    }
 
     function startTimeout() {
         var timeText;
