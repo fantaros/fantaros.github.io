@@ -65,6 +65,13 @@
         var num = 0;
         var oldH = $(window).height();
 
+        $(window).on("resize", function (){
+            var newH = $(window).height();
+            if (newH != oldH) {
+                log("widow resize, " + newH + ", " + oldH);
+            }
+        });
+
         function message() {
             var args = [].slice.call(arguments);
             var s = "";
