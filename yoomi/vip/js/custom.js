@@ -44,13 +44,12 @@ $(function() {
              //}
         }*/
         var newH = $(window).height();
-        if (newH < oldH) {
+        if (newH != oldH) {
             //this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
         } else {
             $("main.mainContent").css("top", "0px");
         }
-        oldH = newH;
     }
 
     function startTimeout() {
