@@ -12,13 +12,18 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        if (/android/i.test(navigator.userAgent)) {
+        //if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
-        }
+        //}
     });
 
     $("input.focusInput").on("blur", function() {
+        this.scrollIntoView(true);
+        $("main.mainContent").css("top", "0px");
+    });
+
+    $(window).resize(function (){
         this.scrollIntoView(true);
         $("main.mainContent").css("top", "0px");
     });
