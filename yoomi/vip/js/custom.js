@@ -1,7 +1,8 @@
 $(function() {
-    var h = $(window).height();
-    var timeLeft = 60;
-    var counting = false;
+    var h = $(window).height(),
+    timeLeft = 60,
+    counting = false,
+    oldH = $(window).height();
     //设定内容区域的高度
     $("main").css("height", "" + h + "px");
 
@@ -12,10 +13,10 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        //if (/android/i.test(navigator.userAgent)) {
+        if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
-        //}
+        }
     });
 
     $("input.focusInput").on("blur", function() {
@@ -23,9 +24,13 @@ $(function() {
         $("main.mainContent").css("top", "0px");
     });
 
-    $(window).resize(function (){
-        this.scrollIntoView(true);
-        $("main.mainContent").css("top", "0px");
+    $(window).on("resize", function (){
+        var newH = $(window).height();
+        if (newH != oldH) {
+            oldH = newH;
+            this.scrollIntoView(true);
+            $("main.mainContent").css("top", "0px");
+        }
     });
 
     function startTimeout() {
