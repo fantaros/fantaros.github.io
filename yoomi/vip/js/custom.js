@@ -13,10 +13,10 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        //if (/android/i.test(navigator.userAgent)) {
+        if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
-        //}
+        }
     });
 
     $("input.focusInput").on("blur", function() {
@@ -46,7 +46,9 @@ $(function() {
         var newH = $(window).height();
         if (newH != oldH) {
             //this.scrollIntoView(true);
-            $("main.mainContent").css("top", "-180px");
+            if (/android/i.test(navigator.userAgent)) {
+                $("main.mainContent").css("top", "-180px");
+            }
         } else {
             $("main.mainContent").css("top", "0px");
         }
