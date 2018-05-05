@@ -13,10 +13,10 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        if (/android/i.test(navigator.userAgent)) {
+        //if (/android/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
-        }
+        //}
     });
 
     $("input.focusInput").on("blur", function() {
@@ -34,8 +34,10 @@ $(function() {
     });*/
     
     window.onresize = function(){
-        if(document.body.clientHeight < 500 && (/android/i.test(navigator.userAgent)) ) {
+        if(document.body.clientHeight < 500 ) {
+            //if (/android/i.test(navigator.userAgent)) {
             $("main.mainContent").css("top", "-180px");
+            //}
         }else{
              //if(parseInt($("main.mainContent").css("top")) < 0){
                 $("main.mainContent").css("top", "0px");
