@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <script>
+    wx.config({
+    beta: true,
+    appId: data.appid,
+    timestamp: data.timestamp,
+    nonceStr: data.nonceStr, 
+    signature: data.signature,
+    jsApiList: [
+        'onMenuShareTimeline',
+        ...
+        'launch3rdApp',
+        'openCard'
+    ]
+});
+
+wx.ready(function() {
+    wx.invoke("getInstallState", {
+        packageName: "com.breadtrip",
+        packageUrl: "breadtrip://"
+    }, function(a) {}),
+
+    wx.invoke("launch3rdApp", {
+        appID: "wxe334a1e34a01d971",
+        messageExt: encodeURI(a.iosUrl || a.url),
+        extInfo: encodeURI(a.androidUrl || a.url)
+    }, function(b) {
+    });
+});
+    </script>
+
+</body>
+</html>

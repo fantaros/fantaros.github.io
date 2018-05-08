@@ -2,7 +2,8 @@
 
 <body>
     <script>
-    WeixinJSBridge.invoke("getInstallState", {
+        if (WeixinJSBridge) {
+            WeixinJSBridge.invoke("getInstallState", {
             packageName: "com.sfit.TradeNow.Simnow",
             packageUrl: "tradenow://"
         }, function (data) {
@@ -14,7 +15,9 @@
             } else {
                 document.write("Tradenow没有安装："+ data);
             }
-        })    
+        });
+        }
+    
     </script>
 
 </body>
