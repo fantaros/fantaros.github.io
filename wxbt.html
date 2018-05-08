@@ -4,10 +4,10 @@
     <script>
     wx.config({
     beta: true,
-    appId: data.appid,
-    timestamp: data.timestamp,
-    nonceStr: data.nonceStr, 
-    signature: data.signature,
+    appId: "",
+    timestamp: new Date().getTime() * 1000,
+    nonceStr: "", 
+    signature: "",
     jsApiList: [
         'onMenuShareTimeline',
         'launch3rdApp',
