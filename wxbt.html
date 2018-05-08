@@ -17,10 +17,13 @@
 });
 
 wx.ready(function() {
+    alert("wxready");
     wx.invoke("getInstallState", {
         packageName: "com.breadtrip",
         packageUrl: "breadtrip://"
-    }, function(a) {}),
+    }, function(a) {
+        alert("" + a);
+    }),
 
     wx.invoke("launch3rdApp", {
         appID: "wxe334a1e34a01d971",
