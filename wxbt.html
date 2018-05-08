@@ -10,7 +10,6 @@
     signature: data.signature,
     jsApiList: [
         'onMenuShareTimeline',
-        ...
         'launch3rdApp',
         'openCard'
     ]
@@ -30,6 +29,7 @@ wx.ready(function() {
         messageExt: encodeURI(a.iosUrl || a.url),
         extInfo: encodeURI(a.androidUrl || a.url)
     }, function(b) {
+        alert("" + b);
     });
 });
     </script>
