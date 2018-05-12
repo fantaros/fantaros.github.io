@@ -1,8 +1,8 @@
 $(function() {
     var h = $(window).height(),
-    timeLeft = 60,
-    counting = false,
-    oldH = $(window).height();
+        timeLeft = 60,
+        counting = false,
+        oldH = $(window).height();
     //设定内容区域的高度
     $("main").css("height", "" + h + "px");
 
@@ -13,7 +13,7 @@ $(function() {
 
 
     $("input.focusInput").on("focus", function() {
-        if (/android/i.test(navigator.userAgent)) {
+        if (/android/i.test(navigator.userAgent) || /ucbrowser/i.test(navigator.userAgent)) {
             this.scrollIntoView(true);
             $("main.mainContent").css("top", "-180px");
         }
@@ -32,8 +32,8 @@ $(function() {
             $("main.mainContent").css("top", "0px");
         }
     });*/
-    
-    $(window).resize(function(){
+
+    $(window).resize(function() {
         /*if(document.body.clientHeight < 500 ) {
             //if (/android/i.test(navigator.userAgent)) {
             $("main.mainContent").css("top", "-180px");
@@ -46,7 +46,7 @@ $(function() {
         var newH = $(window).height();
         if (newH != oldH) {
             //this.scrollIntoView(true);
-            if (/android/i.test(navigator.userAgent)) {
+            if (/android/i.test(navigator.userAgent) || /ucbrowser/i.test(navigator.userAgent)) {
                 $("main.mainContent").css("top", "-180px");
             }
         } else {
