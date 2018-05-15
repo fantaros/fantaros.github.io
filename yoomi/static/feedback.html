@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>意见反馈</title>
+    <link rel="text/css" href="css/dialog.css" />
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/dialog.js" type="text/javascript"></script>
+    <style>
+        * {
+            margin: 0 0;
+            padding: 0 0;
+        }
+        
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: #BFBFBF;
+        }
+        
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+            color: #BFBFBF;
+        }
+        
+        .textarea_div {
+            margin-top: 20px;
+            margin-left: 4%;
+            margin-right: 4%;
+            width: 92%;
+            height: 170px;
+            background-color: #FAFAFA;
+            text-align: center;
+            border: 1px solid #F3584D;
+            border-radius: 4px;
+        }
+        
+        .contact_div {
+            margin-left: 4%;
+            margin-right: 4%;
+            width: 92%;
+            text-align: center;
+            background-color: #FAFAFA;
+            border: 1px solid #F3584D;
+            border-radius: 4px;
+        }
+        
+        .textarea {
+            padding-top: 16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            word-break: break-all;
+            width: 92%;
+            height: 160px;
+            border: none;
+            font-size: 14px;
+            background-color: #FAFAFA;
+            resize: none;
+        }
+        
+        input.contact {
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 40px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            background-color: #FAFAFA;
+        }
+        
+        .label {
+            margin-top: 20px;
+            margin-bottom: 6px;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #333333;
+        }
+        
+        .submit_div {
+            margin-top: 60px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        
+        .submit {
+            border: none;
+            height: 40px;
+            width: 250px;
+            font-size: 14px;
+            background: -webkit-linear-gradient(left, #EB3349, #F45C43);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, #EB3349, #F45C43);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, #EB3349, #F45C43);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, #EB3349, #F45C43);
+            /* 标准的语法（必须放在最后） */
+            color: #FFFFFF;
+            font-size: 14px
+        }
+    </style>
+    <style>
+        .center {
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #alertDialog {
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            position: absolute;
+            background-color: transparent;
+            border: none;
+        }
+        
+        #alertDialogContent {
+            width: 140px;
+            height: 120px;
+            margin: 0px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .dialogMain {
+            height: 360px;
+            font-size: 11px;
+            color: #333333;
+            letter-spacing: 0;
+            overflow: scroll;
+            vertical-align: middle;
+        }
+        
+        .infoBox {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .imgDiv {
+            width: 140px;
+            height: 100px;
+            margin: 0px auto;
+        }
+        
+        .iconImg {
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .iconText {
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<form method="POST" action="../feedback/submit">-->
+    <div class="textarea_div">
+        <textarea id="content" class="textarea" placeholder="请写下您的建议和意见并留下联系方式，我们会尽快给您回复。"></textarea>
+    </div>
+
+    <div class="label">您的联系方式：</div>
+    <div class="contact_div">
+        <input id="contact" class="contact" type="text">
+    </div>
+
+    <div class="submit_div">
+        <input class="submit" type="submit" value="提交">
+    </div>
+    <!--</form>-->
+
+    <dialog id="alertDialog" class="dialogRegion" style="display:none;">
+        <div id="alertDialogContent" class="alertDialogContent">
+            <div id="alertInfo" class="infoBox">
+                <div class="imgDiv">
+                    <img src="images/success.png" alt="✓" class="center iconImg" />
+                    <div id="detailText" class="iconText">提交成功</div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+</body>
+<script>
+    $(function() {
+        $("input.submit").click(function() {
+            var content = $("#content").val();
+            var contact = $("#contact").val();
+            if (content == "") {
+                openAlert("内容不能为空", 3000);
+                return;
+            }
+
+            $.post("../feedback/submit", {
+                "content": content,
+                "contact": contact
+            }, function(data) {
+                if (data.code == 20000) {
+                    openAlert("保存成功", 3000);
+                }
+                $("#content").val("");
+                $("#contact").val("");
+            }, "json");
+        });
+    })
+</script>
+
+</html>
