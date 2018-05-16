@@ -50,6 +50,6 @@ $(function() {
 
     $("#alertDialogContent").click(window.closeAlert);
 
-    $(".textarea").width($("div.textarea_div").width() - 32);
-    $("input.contact").width($("div.contact_div").width() - 32);
+    //$(".textarea").width($("div.textarea_div").width() - 32);
+    //$("input.contact").width($("div.contact_div").width() - 32);
 });
