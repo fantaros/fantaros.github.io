@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>参与活动</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./asset/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="cont">
+        <div class="demo">
+            <div class="login">
+                <!--
+                <div class="login__check"></div>
+                <div class="login__form"></div>
+            -->
+
+                <div style="background-image:url('asset/basket.png');background-repeat:no-repeat;background-position:center;height:128px;text-align:center">
+                    <p style="padding-left:20px;padding-right:20px;padding-top:32px;color:white;text-align:center;font-size:14px;">
+                        参与活动就有100%的机会获得奖品，您只需提供您公司名称，抽奖用的微信名称，联系电话以及联系地址，我们就会将奖品快递到您手中！
+                    </p>
+                </div>
+
+                <div class="login__row">
+
+                    <input type="text" id="name" class="login__input name" placeholder="公司名称">
+                </div>
+                <div class="login__row">
+
+                    <input type="text" id="code" class="login__input pass" placeholder="微信名称">
+                </div>
+                <div class="login__row">
+                    <input type="text" id="code" class="login__input pass" placeholder="联系电话">
+                </div>
+                <div class="login__row">
+                    <select id="">
+                        <option value ="上海市" selected="selected">上海市</option>
+                    </select>
+
+                    <select id="">
+                        <option value ="市辖区" selected="selected">市辖区</option>
+                    </select>
+
+                    <select id="">
+                        <option value="">请选择所在区</option>
+                        <option value="浦东新区">浦东新区</option>
+                        <option value="黄浦区">黄浦区</option>
+                        <option value="静安区">静安区</option>
+                        <option value="徐汇区">徐汇区</option>
+                        <option value="长宁区">长宁区</option>
+                        <option value="普陀区">普陀区</option>
+                        <option value="虹口区">虹口区</option>
+                        <option value="杨浦区">杨浦区</option>
+                        <option value="宝山区">宝山区</option>
+                        <option value="闵行区">闵行区</option>
+                        <option value="嘉定区">嘉定区</option>
+                        <option value="金山区">金山区</option>
+                        <option value="松江区">松江区</option>
+                        <option value="青浦区">青浦区</option>
+                        <option value="奉贤区">奉贤区</option>
+                        <option value="崇明区">崇明区</option>
+                    </select>
+                </div>
+                <div class="login__row">
+                    <input type="text" id="code" class="login__input pass" placeholder="联系地址">
+                </div>
+                <button id="gotoact" type="button" class="login__submit">进入活动</button>
+
+            </div>
+            <div class="app">
+                <div class="app__top">
+                    <div class="app__menu-btn">
+                        <span></span>
+                    </div>
+                    <svg class="app__icon search svg-icon" viewBox="0 0 20 20">
+          <!-- yeap, its purely hardcoded numbers straight from the head :D (same for svg above) -->
+          <path d="M20,20 15.36,15.36 a9,9 0 0,1 -12.72,-12.72 a 9,9 0 0,1 12.72,12.72"></path>
+        </svg>
+                    <p class="app__hello">Good Morning!</p>
+                    <div class="app__user">
+                        <span class="app__user-notif">3</span>
+                    </div>
+                    <div class="app__month">
+                        <span class="app__month-btn left"></span>
+                        <p class="app__month-name">March</p>
+                        <span class="app__month-btn right"></span>
+                    </div>
+                </div>
+                <div class="app__bot">
+                    <div class="app__days">
+                        <div class="app__day weekday">Sun</div>
+                        <div class="app__day weekday">Mon</div>
+                        <div class="app__day weekday">Tue</div>
+                        <div class="app__day weekday">Wed</div>
+                        <div class="app__day weekday">Thu</div>
+                        <div class="app__day weekday">Fri</div>
+                        <div class="app__day weekday">Sad</div>
+                        <div class="app__day date">8</div>
+                        <div class="app__day date">9</div>
+                        <div class="app__day date">10</div>
+                        <div class="app__day date">11</div>
+                        <div class="app__day date">12</div>
+                        <div class="app__day date">13</div>
+                        <div class="app__day date">14</div>
+                    </div>
+                </div>
+                <div class="app__logout">
+                    <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"></path>
+        </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./asset/jquery.min.js"></script>
+    <script type="text/javascript" src="./asset/index.js"></script>
+</body>
+
+</html>
